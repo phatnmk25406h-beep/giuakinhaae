@@ -9,6 +9,6 @@ list_of_list = data_frame.values.tolist()  #tạo ra một list of list [] khác
 while len(list_of_list)>0: #khi ht từ vựng thì danh sách rỗng thì len() danh sách sẽ =0
     randomlist = random.choice(list_of_list) #tạo một bien chứa tập hợp các list được random
     m=input(f"{randomlist[0]}: ") # nhập tiếng viet sao cho đúng vs tiếng anh ( phần kiểm tra bài cũ)
-    if m==randomlist[1]:  #dò xem nếu đúng thì remove, còn k thì quay lên trên dò bài tiếp
+    if m.strip().lower()==randomlist[1].strip().lower():  #dò xem nếu đúng thì remove, còn k thì quay lên trên dò bài tiếp
         list_of_list.remove(randomlist)
 print(list_of_list)
